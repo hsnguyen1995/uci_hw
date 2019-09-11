@@ -31,11 +31,11 @@ with open(budget_data_csv, newline="") as csvfile:
 
 #   * The greatest increase in profits (date and amount) over the entire period
         maxProfit = max(profitChange)
-        dateMaxProfit = dates[profitChange.index(maxProfit)]
+        dateMaxProfit = dates[profitChange.index(maxProfit) + 1] 
 
 #   * The greatest decrease in losses (date and amount) over the entire period
         maxLoss = min(profitChange)
-        dateMaxLoss = dates[profitChange.index(maxLoss)]
+        dateMaxLoss = dates[profitChange.index(maxLoss) + 1]
 
 # * As an example, your analysis should look similar to the one below:
 
@@ -47,11 +47,13 @@ with open(budget_data_csv, newline="") as csvfile:
 #   Greatest Increase in Profits: Feb-2012 ($1926159)
 #   Greatest Decrease in Profits: Sep-2013 ($-2196167)
 
-    print(f'{summaryHeader} \nTotal Months: {totalMonths}')
-    print(f'Total: ${totalAmount}')
-    print(f'Average  Change: ${round(float(avgOfChanges),2)}')
-    print(f'Greatest Increase in Profits: {dateMaxProfit} (${maxProfit})')
-    print(f'Greatest Decrease in Profits: {dateMaxLoss} (${maxLoss})')
+print(len(dates))
+print(len(profitChange))
+print(f'{summaryHeader} \nTotal Months: {totalMonths}')
+print(f'Total: ${totalAmount}')
+print(f'Average  Change: ${round(float(avgOfChanges),2)}')
+print(f'Greatest Increase in Profits: {dateMaxProfit} (${maxProfit})')
+print(f'Greatest Decrease in Profits: {dateMaxLoss} (${maxLoss})')
     
 
 
