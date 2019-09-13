@@ -1,7 +1,9 @@
 import os
 import csv
+import sys
 
 budget_data_csv = os.path.join("Resources", "budget_data.csv")
+sys.stdout = open("main.txt", 'w')
 
 dates = []
 monthlyRev = []
@@ -47,8 +49,7 @@ with open(budget_data_csv, newline="") as csvfile:
 #   Greatest Increase in Profits: Feb-2012 ($1926159)
 #   Greatest Decrease in Profits: Sep-2013 ($-2196167)
 
-print(len(dates))
-print(len(profitChange))
+
 print(f'{summaryHeader} \nTotal Months: {totalMonths}')
 print(f'Total: ${totalAmount}')
 print(f'Average  Change: ${round(float(avgOfChanges),2)}')
