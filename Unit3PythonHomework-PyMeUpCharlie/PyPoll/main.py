@@ -3,7 +3,7 @@ import csv
 import sys
 
 election_data_csv = os.path.join("Resources","election_data.csv")
-sys.stdout = open("main.txt", "w")
+
 
 with open(election_data_csv, newline="") as csvfile:
     csvReader = csv.reader(csvfile, delimiter=",")
@@ -73,3 +73,12 @@ print(f'Li: {round(float(LiPercent), 3)}% ({LiVotes})')
 print(f"O'Tooley: {round(float(OTooleyPercent), 3)}% ({OTooleyVotes}) \n{breakLine}")
 print(f'Winner: {winner} \n{breakLine}')
 
+sys.stdout = open("main.txt", "w")
+
+print(f'Election Results \n{breakLine}')
+print(f'Total Votes: {totalVotes} \n{breakLine}')
+print(f'Khan: {round(float(KhanPercent), 3)}% ({KhanVotes})')
+print(f'Correy: {round(float(CorreyPercent), 3)}% ({CorreyVotes})')
+print(f'Li: {round(float(LiPercent), 3)}% ({LiVotes})')
+print(f"O'Tooley: {round(float(OTooleyPercent), 3)}% ({OTooleyVotes}) \n{breakLine}")
+print(f'Winner: {winner} \n{breakLine}')

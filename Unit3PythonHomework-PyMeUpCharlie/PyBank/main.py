@@ -3,7 +3,7 @@ import csv
 import sys
 
 budget_data_csv = os.path.join("Resources", "budget_data.csv")
-sys.stdout = open("main.txt", 'w')
+
 
 dates = []
 monthlyRev = []
@@ -55,6 +55,11 @@ print(f'Total: ${totalAmount}')
 print(f'Average  Change: ${round(float(avgOfChanges),2)}')
 print(f'Greatest Increase in Profits: {dateMaxProfit} (${maxProfit})')
 print(f'Greatest Decrease in Profits: {dateMaxLoss} (${maxLoss})')
-    
 
+sys.stdout = open("main.txt", 'w')  
 
+print(f'{summaryHeader} \nTotal Months: {totalMonths}')
+print(f'Total: ${totalAmount}')
+print(f'Average  Change: ${round(float(avgOfChanges),2)}')
+print(f'Greatest Increase in Profits: {dateMaxProfit} (${maxProfit})')
+print(f'Greatest Decrease in Profits: {dateMaxLoss} (${maxLoss})')
