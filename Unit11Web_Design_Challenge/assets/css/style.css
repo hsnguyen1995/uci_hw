@@ -1,0 +1,45 @@
+/* Dropdown */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    z-index: 1;
+    position absolute;
+    display: none;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+    background-color: #55cc98;
+}
+
+/* index.html Description */
+.desc-img-pad {
+    padding: 2px;
+}
+
+.desc-text {
+    line-height: 45px;
+    font-size: 15px;
+    font-weight: 100;
+}
+
+.img-hover:hover {
+    border-width: 5px;
+    border-color: #6ff4ba;
+    border-style: ridge;
+}
+
+/* comparison.html Graph Headers */
+.graph-header {
+    padding-bottom: 5px;
+    font-size: 30px;
+    font-family: Tahoma, Geneva, sans-serif;
+    text-align: center;
+}
+
+/* Footer */
+.foot-bar {
+    background-color: #55cc98;
+}

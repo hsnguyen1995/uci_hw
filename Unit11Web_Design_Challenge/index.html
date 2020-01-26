@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Weather Dashboard: Home</title>
+
+    <!-- Bootstrap CSS-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Bootswatch CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.4.1/darkly/bootstrap.min.css" rel="stylesheet" integrity="sha384-rCA2D+D9QXuP2TomtQwd+uP50EHjpafN+wruul0sXZzX/Da7Txn4tB9aLMZV4DZm" crossorigin="anonymous">
+
+    <!-- personal style CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <!-- NavBar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="col-sm-9">
+            <a class="navbar-brand" href="#">Latitude</a>
+        </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarColor03">
+          <ul class="nav navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Plots</a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="visualizations/cloud.html">Cloudiness</a></li>
+                    <li><a class="dropdown-item" href="visualizations/humidity.html">Humidity</a></li>
+                    <li><a class="dropdown-item" href="visualizations/temp.html">Max Temperature</a></li>
+                    <li><a class="dropdown-item" href="visualizations/wind.html">Wind Speed</a></li>
+                </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="comparison.html">Comparison</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="data.html">Data</a>
+            </li>
+          </ul>
+        </div>
+    </nav>
+
+    <br>
+    <br>
+    <br>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="card text-white bg-success mb-3">
+                    <div class="card-header" style="font-size: 30px;">Summary: Latitude vs. X</div>
+                    <div class="card-body">
+                    <img src="assets/images/LatVsTemp.png" class="desc-img-pad" align="left" width="50%" alt="City Latitude vs. Max Temperature">
+                    <p class="desc-text">The purpose of this project was to analyze how weather changes as you get closer to the equator. To accomplish this analysis, we first pulled data from the OpenWeatherMap API to assemble a dataset on over 500 cities.</p>
+                    <p class="desc-text">After assembling the dataset, we used Matplotlib to plot various aspects of the weather vs. latitude. Factors we looked at included: temperature, cloudiness, wind speed, and humidity. This site provides the source data and visualizations created as part of the analysis, as well as explanations and descriptions of any trends and correlations witnessed.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card text-white bg-success mb-3 mx-auto">
+                    <div class="card-header" style="font-size: 30px;">Visualizations</div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <a href= "visualizations/temp.html"><img src="assets/images/LatVsTemp.png" class="img-hover desc-img-pad" width="100%" alt="Latitude Vs. Max Temperature"></a>
+                            </div>
+                            <div class="col-sm-6">
+                                <a href= "visualizations/humidity.html"><img src="assets/images/LatVsHumidity.png" class="img-hover desc-img-pad" width="100%" alt="Latitude Vs. Humidity"></a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <a href= "visualizations/cloud.html"><img src="assets/images/LatVsCloud.png" class="img-hover desc-img-pad" width="100%" alt="Latitude Vs. Cloudiness"></a>
+                            </div>
+                            <div class="col-sm-6">
+                                <a href= "visualizations/wind.html"><img src="assets/images/LatVsWind.png" class="img-hover desc-img-pad" width="100%" alt="Latitude Vs. Wind Speed"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<footer class="footer foot-bar">
+    <div class="text-white text-center">Huy Nguyen Web Assignment</div>
+</footer>
+
+</html>

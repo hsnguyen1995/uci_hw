@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Weather Dashboard: Comparison</title>
+
+    <!-- Bootstrap CSS-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Bootswatch CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.4.1/darkly/bootstrap.min.css" rel="stylesheet" integrity="sha384-rCA2D+D9QXuP2TomtQwd+uP50EHjpafN+wruul0sXZzX/Da7Txn4tB9aLMZV4DZm" crossorigin="anonymous">
+
+    <!-- personal style CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <!-- NavBar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="col-sm-9">
+            <a class="navbar-brand" href="index.html">Latitude</a>
+        </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarColor03">
+            <ul class="nav navbar-nav mr-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Plots</a>
+                  <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="visualizations/cloud.html">Cloudiness</a></li>
+                      <li><a class="dropdown-item" href="visualizations/humidity.html">Humidity</a></li>
+                      <li><a class="dropdown-item" href="visualizations/temp.html">Max Temperature</a></li>
+                      <li><a class="dropdown-item" href="visualizations/wind.html">Wind Speed</a></li>
+                  </ul>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="comparison.html">Comparison<span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="data.html">Data</a>
+              </li>
+            </ul>
+          </div>
+    </nav>
+
+    <br>
+    <br>
+    <br>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card text-white bg-success mb-3">
+                    <div class="card-header" style="font-size: 30px;">Comparison: Latitude vs. X</div>
+                    <div class="card-body">
+                        <p>Click any plot to get an in-depth analysis.</p>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <p class="graph-header">vs. Max Temperature<a href= "visualizations/temp.html"><img src="assets/images/LatVsTemp.png" class="img-hover desc-img-pad" width="100%" alt="Latitude Vs. Max Temperature"></a></p>
+                            </div>
+                            <div class="col-sm-6">
+                                <p class="graph-header">vs. Humidity<a href= "visualizations/humidity.html"><img src="assets/images/LatVsHumidity.png" class="img-hover desc-img-pad" width="100%" alt="Latitude Vs. Humidity"></a></p>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <p class="graph-header">vs. Cloudiness<a href= "visualizations/cloud.html"><img src="assets/images/LatVsCloud.png" class="img-hover desc-img-pad" width="100%" alt="Latitude Vs. Cloudiness"></a></p> 
+                            </div>
+                            <div class="col-sm-6">
+                                <p class="graph-header">vs. Wind Speed<a href= "visualizations/wind.html"><img src="assets/images/LatVsWind.png" class="img-hover desc-img-pad" width="100%" alt="Latitude Vs. Wind Speed"></a></p> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<footer class="footer foot-bar">
+    <div class="text-white text-center">Huy Nguyen Web Assignment</div>
+</footer>
+
+</html>
